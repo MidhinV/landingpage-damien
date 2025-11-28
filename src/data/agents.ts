@@ -6,7 +6,8 @@ import {
   Headphones, 
   UserPlus, 
   Receipt,
-  Sparkles
+  Sparkles,
+  Video
 } from "lucide-react";
 
 export interface Agent {
@@ -156,6 +157,23 @@ export const agents: Agent[] = [
       "Expense tracking",
       "Payment reminders",
       "Compliance ready reports"
+    ]
+  },
+  {
+    id: "video-analyzer",
+    name: "Video Analyzer",
+    tagline: "Intelligent Video Content Analysis",
+    description: "This agent analyzes video content and provides detailed descriptions of what is happening in the footage. Perfect for content creators, educators, and businesses that need automated video summarization and analysis.",
+    icon: Video,
+    image: "/agents/video-analyzer.svg",
+    animatedImage: "/agents/video-analyzer.svg",
+    features: [
+      "Automatic video analysis",
+      "Detailed scene descriptions",
+      "Content summarization",
+      "Object and action recognition",
+      "Timestamp annotations",
+      "Multi format support"
     ]
   }
 ];
