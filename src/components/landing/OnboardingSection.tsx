@@ -26,7 +26,7 @@ function AgentAnimatedImage({ animatedSrc, staticSrc, alt }: { animatedSrc?: str
   if (!currentSrc || imageError) {
     // Show a friendly placeholder if image fails to load
     return (
-      <div className="w-full md:w-48 h-32 rounded-lg border border-border/50 flex-shrink-0 bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
+      <div className="w-full md:w-48 h-32 rounded-lg border border-border/50 flex-shrink-0 bg-white p-2 flex items-center justify-center">
         <div className="text-xs text-muted-foreground text-center px-2">
           Illustration coming soon
         </div>
@@ -38,7 +38,7 @@ function AgentAnimatedImage({ animatedSrc, staticSrc, alt }: { animatedSrc?: str
   const isLottie = currentSrc?.toLowerCase().endsWith('.json');
   
   return (
-    <div className="relative w-full md:w-48 h-32 rounded-lg overflow-hidden border border-border/50 flex-shrink-0 bg-muted">
+    <div className="relative w-full md:w-48 h-32 rounded-lg overflow-hidden border border-border/50 flex-shrink-0 bg-white p-2">
       {!imageLoaded && (
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 animate-pulse" />
       )}
@@ -46,7 +46,7 @@ function AgentAnimatedImage({ animatedSrc, staticSrc, alt }: { animatedSrc?: str
         <img
           src={currentSrc}
           alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-full h-full object-contain transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
           onError={() => {
             console.log('Image failed to load, trying fallback:', currentSrc);
             tryStaticFallback();
@@ -152,7 +152,7 @@ export function OnboardingSection() {
               
               <div className="space-y-6 mt-4">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
-                  {/* Animated Agent Illustration - Friendly decorative element */}
+                  {/* Animated Agent Illustration: Friendly decorative element */}
                   {(selectedAgent.animatedImage || selectedAgent.image) && (
                     <AgentAnimatedImage 
                       animatedSrc={selectedAgent.animatedImage} 
