@@ -3,8 +3,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, TrendingUp, Zap } from "lucide-react";
 import Image from "next/image";
+import { useContactForm } from "@/contexts/ContactFormContext";
 
 export function HeroSection() {
+  const { openForm } = useContactForm();
+  
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20 bg-background">
       {/* Geometric Background Pattern */}
@@ -37,12 +40,12 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up opacity-0" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
-              <Button variant="hero" size="xl">
+              <Button variant="hero" size="xl" onClick={openForm}>
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="xl">
-                Learn More
+              <Button variant="outline" size="xl" onClick={openForm}>
+                Contact Us
               </Button>
             </div>
 
@@ -90,8 +93,8 @@ export function HeroSection() {
               </div>
               
               <div className="card-elevated p-6 text-center group hover-lift">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-secondary/20 transition-colors">
-                  <TrendingUp className="w-6 h-6 text-secondary" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors">
+                  <TrendingUp className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-sm mb-1">Proven Results</h3>
                 <p className="text-xs text-muted-foreground">Measurable impact</p>

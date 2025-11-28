@@ -2,6 +2,7 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ContactFormProvider } from "@/contexts/ContactFormContext";
 
 export default function ClientLayout({
   children,
@@ -10,8 +11,10 @@ export default function ClientLayout({
 }) {
   return (
     <TooltipProvider>
-      <Toaster />
-      {children}
+      <ContactFormProvider>
+        <Toaster />
+        {children}
+      </ContactFormProvider>
     </TooltipProvider>
   );
 }

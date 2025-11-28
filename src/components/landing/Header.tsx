@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useContactForm } from "@/contexts/ContactFormContext";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -15,6 +16,7 @@ const navItems = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openForm } = useContactForm();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +47,7 @@ export function Header() {
             </a>
           ))}
           <div className="ml-4 pl-4 border-l border-border">
-            <Button variant="default" size="default">
+            <Button variant="default" size="default" onClick={openForm}>
               Let's Talk
             </Button>
           </div>
@@ -76,7 +78,7 @@ export function Header() {
               </a>
             ))}
             <div className="pt-2 mt-2 border-t border-border">
-              <Button variant="default" size="lg" className="w-full">
+              <Button variant="default" size="lg" className="w-full" onClick={() => { openForm(); setIsMobileMenuOpen(false); }}>
                 Let's Talk
               </Button>
             </div>

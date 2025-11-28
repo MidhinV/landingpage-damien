@@ -2,8 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Mail, MessageCircle, CheckCircle2 } from "lucide-react";
+import { useContactForm } from "@/contexts/ContactFormContext";
 
 export function CTASection() {
+  const { openForm } = useContactForm();
+  
   return (
     <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/5 via-muted/30 to-secondary/5">
       {/* Background */}
@@ -31,7 +34,7 @@ export function CTASection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button variant="outline" size="xl">
+              <Button variant="outline" size="xl" onClick={openForm}>
                 <Mail className="w-5 h-5" />
                 Schedule a Call
               </Button>
