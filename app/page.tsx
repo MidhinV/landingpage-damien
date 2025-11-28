@@ -9,6 +9,7 @@ import { IndustriesSection } from "@/components/landing/IndustriesSection";
 import { WhyMeSection } from "@/components/landing/WhyMeSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/landing/Footer";
+import { DamienChatbot } from "@/components/landing/DamienChatbot";
 
 export default function LandingPage() {
   return (
@@ -24,6 +25,7 @@ export default function LandingPage() {
         <CTASection />
       </main>
       <Footer />
+      <DamienChatbot />
     </div>
   );
 }
