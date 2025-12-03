@@ -80,15 +80,12 @@ export function OnboardingSection() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4" />
-              <span>Product Showcase</span>
-            </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Our <span className="text-gradient">AI Agent Portfolio</span>
+              AI Agents You Can Put to Work in{" "}
+              <span className="text-gradient">Your Business</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Discover our suite of intelligent AI agents designed to automate, enhance, and transform your business operations.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              I partner with <strong>MultipleAI</strong> to bring you a full suite of practical, ready to deploy AI agents. Each one is designed to handle a specific part of your business, from reception and admin through to sales, marketing, support, finance, and security.
             </p>
           </div>
 
@@ -116,7 +113,7 @@ export function OnboardingSection() {
                       </p>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 text-justify">
                     {agent.description}
                   </p>
                   <div className="mt-4 flex items-center gap-2 text-sm text-primary font-medium">
@@ -162,7 +159,7 @@ export function OnboardingSection() {
                   )}
                   
                   <div className="flex-1">
-                    <p className="text-base text-foreground leading-relaxed">
+                    <p className="text-base text-foreground leading-relaxed text-justify">
                       {selectedAgent.description}
                     </p>
                   </div>
@@ -179,11 +176,27 @@ export function OnboardingSection() {
                     ))}
                   </div>
                 </div>
+                
+                {selectedAgent.useCases && selectedAgent.useCases.length > 0 && (
+                  <div className="pt-4 border-t border-border">
+                    <p className="text-sm text-foreground font-medium">
+                      {selectedAgent.useCases[0]}
+                    </p>
+                  </div>
+                )}
               </div>
             </>
           )}
         </DialogContent>
       </Dialog>
+      
+      {/* Closing Note */}
+      <div className="max-w-4xl mx-auto text-center mt-12">
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          Want to see these in action for your organisation?<br />
+          <strong className="text-foreground">I can walk you through live demos and help you choose the right mix of agents for your needs.</strong>
+        </p>
+      </div>
     </section>
   );
 }

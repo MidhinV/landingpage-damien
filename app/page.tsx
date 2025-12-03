@@ -2,11 +2,12 @@
 
 import { Header } from "@/components/landing/Header";
 import { HeroSection } from "@/components/landing/HeroSection";
-import { AboutSection } from "@/components/landing/AboutSection";
+import { TraditionalVsAI } from "@/components/landing/TraditionalVsAI";
 import { ServicesSection } from "@/components/landing/ServicesSection";
+import { AIJourneySection } from "@/components/landing/AIJourneySection";
 import { OnboardingSection } from "@/components/landing/OnboardingSection";
+import { AboutSection } from "@/components/landing/AboutSection";
 import { IndustriesSection } from "@/components/landing/IndustriesSection";
-import { WhyMeSection } from "@/components/landing/WhyMeSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/landing/Footer";
 import { DamienChatbot } from "@/components/landing/DamienChatbot";
@@ -17,11 +18,12 @@ export default function LandingPage() {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
+        <TraditionalVsAI />
         <ServicesSection />
+        <AIJourneySection />
         <OnboardingSection />
+        <AboutSection />
         <IndustriesSection />
-        <WhyMeSection />
         <CTASection />
       </main>
       <Footer />

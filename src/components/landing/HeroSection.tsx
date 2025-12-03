@@ -18,6 +18,18 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-r from-secondary/5 to-transparent" />
 
       <div className="container mx-auto px-10 md:px-12 relative z-10">
+        {/* Main Heading - Full Width */}
+        <div className="mb-16 pt-12 md:pt-16 lg:pt-20">
+          <h1 className="text-center animate-fade-in-up opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground mb-2 whitespace-nowrap">
+              Transform your organisational knowledge into
+            </div>
+            <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-primary">
+              AI that thinks and acts with you
+            </div>
+          </h1>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left space-y-8">
@@ -27,25 +39,63 @@ export function HeroSection() {
               <span>Bespoke AI Solutions</span>
             </div>
 
-            {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] animate-fade-in-up opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-              From Static Content to{" "}
-              <span className="text-gradient">Smart Conversations</span>
-            </h1>
-
             {/* Subheading */}
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
-              Transform your knowledge into intelligent AI agents that understand your business.
-            </p>
+            <div className="max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
+              {/* Question 1 */}
+              <div className="card-elevated p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/20">
+                <p className="text-xl md:text-2xl font-bold mb-3 text-foreground">
+                  <span className="text-primary">Tired</span> of waiting months or years for traditional software?
+                </p>
+                <p className="text-lg md:text-xl text-muted-foreground text-justify">
+                  Modern AI agents deliver results in days and weeks, transforming your organisational knowledge into intelligent agents that understand your business.
+                </p>
+              </div>
+
+              {/* Question 2 */}
+              <div className="card-elevated p-6 bg-gradient-to-br from-secondary/10 via-secondary/5 to-transparent border-primary/20">
+                <p className="text-xl md:text-2xl font-bold mb-3 text-foreground">
+                  <span className="text-primary">Struggling</span> with scattered knowledge across multiple platforms?
+                </p>
+                <p className="text-lg md:text-xl text-muted-foreground text-justify">
+                  AI brings everything together into one intelligent, conversational layer—no more jumping between systems to find what you need.
+                </p>
+              </div>
+
+              {/* Question 3 */}
+              <div className="card-elevated p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/20">
+                <p className="text-xl md:text-2xl font-bold mb-3 text-foreground">
+                  <span className="text-primary">Ready</span> for less confusion and more clarity?
+                </p>
+                <p className="text-lg md:text-xl text-muted-foreground text-justify">
+                  Give your staff and customers operational clarity and seamless interactions across your organisation.
+                </p>
+              </div>
+            </div>
+
+            {/* Quote */}
+            <div className="card-minimal p-6 bg-primary/5 border-primary/20 animate-fade-in-up opacity-0" style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}>
+              <div className="flex items-start gap-4">
+                <Image 
+                  src="/Damien Avatar.png" 
+                  alt="Damien Hill" 
+                  width={60}
+                  height={60}
+                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                />
+                <p className="text-lg italic text-foreground text-justify flex-1">
+                  "AI is a faster, more flexible alternative to complex software projects"
+                </p>
+              </div>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up opacity-0" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
               <Button variant="hero" size="xl" onClick={openForm}>
-                Get Started
+                Start a Conversation
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button variant="outline" size="xl" onClick={openForm}>
-                Contact Us
+                Learn More
               </Button>
             </div>
 

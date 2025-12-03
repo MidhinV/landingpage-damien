@@ -7,7 +7,10 @@ import {
   UserPlus, 
   Receipt,
   Sparkles,
-  Video
+  Video,
+  Search,
+  Share2,
+  Shield
 } from "lucide-react";
 
 export interface Agent {
@@ -43,138 +46,162 @@ export const agents: Agent[] = [
   {
     id: "data-reactivation",
     name: "Data Reactivation AI Agent",
-    tagline: "Turn Old Leads Into New Revenue",
-    description: "This agent automatically contacts old leads, inactive customers, and abandoned inquiries, reengaging them with personalised conversations. Perfect for reviving your pipeline and converting lost opportunities into buyers.",
+    tagline: "Wake up old leads and dormant databases.",
+    description: "Reaches out to past enquiries and inactive customers with personalised follow-ups to turn \"forgotten\" data into new opportunities.",
     icon: Sparkles,
     image: "/agents/data-reactivation.jpg",
     animatedImage: "/agents/animations/data-reactivation.png",
     features: [
-      "Reactivation sequences",
-      "Personalised outreach",
-      "Lead warming",
-      "Upsell & repeat business",
-      "Old database cleanup",
-      "Pipeline receiving"
-    ]
+      "Reactivation and re-engagement campaigns",
+      "Personalised outreach at scale",
+      "Lead warming and upsell prompts",
+      "Database clean-up as it goes"
+    ],
+    useCases: ["Great for: real estate, coaches, agencies and service businesses."]
   },
   {
     id: "receptionist",
     name: "AI Receptionist Agent",
-    tagline: "Your 24/7 Super Friendly Front Desk",
-    description: "Your friendly, humanlike Australian receptionist that answers calls, qualifies leads, books appointments, and never misses a single customer.",
+    tagline: "Your always-on, always-friendly front desk.",
+    description: "Answers calls 24/7, captures details, qualifies enquiries, routes calls and books appointments so you never miss an opportunity or leave a caller waiting.",
     icon: Phone,
     image: "/agents/receptionist.jpg",
     animatedImage: "/agents/animations/receptionist.png",
     features: [
-      "24/7 call answering",
-      "Appointment booking",
-      "Call routing",
-      "Lead capture + qualification",
-      "Humanlike conversational tone",
-      "CRM Integration"
-    ]
+      "Warm, natural Australian-style voice",
+      "Lead capture and qualification",
+      "Bookings, message-taking and call routing",
+      "Connects into your CRM and existing tools"
+    ],
+    useCases: ["Great for: service businesses losing leads through missed calls."]
   },
   {
     id: "sales",
     name: "AI Sales Agent",
-    tagline: "Your High Performance Closer",
-    description: "This agent qualifies leads, handles objections, warms up cold prospects, books meetings, and keeps your pipeline full, all with natural conversational intelligence.",
+    tagline: "A high performance closer that works around the clock.",
+    description: "Nurtures leads, follows up calls, handles objections and books qualified meetings using your messaging and sales style.",
     icon: TrendingUp,
     image: "/agents/sales.jpg",
     animatedImage: "/agents/animations/sales.png",
     features: [
-      "Cold and warm call followups",
-      "Objection handling",
-      "Pipeline nurturing",
-      "Appointment booking",
-      "Lead qualification",
-      "CRM integration"
-    ]
+      "Cold and warm follow-up sequences",
+      "Objection handling in your voice",
+      "Pipeline nurturing and appointment booking",
+      "Full CRM integration for clean records"
+    ],
+    useCases: ["Great for: businesses wanting more sales without more headcount."]
   },
   {
     id: "admin",
     name: "Admin AI Agent",
-    tagline: "Your Tireless Back Office Assistant",
-    description: "Let your business breathe. Our Admin Agent automates day to day admin tasks like scheduling, reminders, customer followups, data entry, ticket creation, and workflow updates.",
+    tagline: "A tireless digital assistant for your back office.",
+    description: "Takes care of scheduling, reminders, follow-ups, and updating key systems so important tasks don't fall through the cracks.",
     icon: Briefcase,
     image: "/agents/admin.jpg",
     animatedImage: "/agents/animations/admin.png",
     features: [
-      "Scheduling & reminders",
-      "Document organisation",
-      "Ticket creation",
-      "CRM updates",
-      "Data entry & workflow automation",
-      "Followups and task management"
-    ]
+      "Smart reminders and task follow-ups",
+      "Document and record organisation",
+      "Ticket creation and workflow updates",
+      "Works alongside your CRM and business apps"
+    ],
+    useCases: ["Great for: teams drowning in admin and compliance tasks."]
   },
   {
     id: "customer-support",
     name: "Customer Support AI Agent",
-    tagline: "Instant Answers & 100% Satisfaction",
-    description: "Your customers receive round the clock support with a polite, humanlike agent that handles FAQs, troubleshooting, product queries, billing requests, and more.",
+    tagline: "Instant answers and zero wait time.",
+    description: "Handles FAQs, troubleshooting, billing and product questions, and creates tickets when a human needs to step in.",
     icon: Headphones,
     image: "/agents/customer-support.jpg",
     animatedImage: "/agents/animations/customer-support.png",
     features: [
-      "24/7 instant replies",
-      "Full FAQ automation",
-      "Billing & product queries",
-      "Ticket creation",
-      "CRM synced",
-      "Zero wait time for customers"
-    ]
+      "24/7 replies to common questions",
+      "FAQ and help-centre automation",
+      "Billing and product query support",
+      "Ticket creation and CRM syncing"
+    ],
+    useCases: ["Great for: reducing support load while lifting customer experience."]
   },
   {
     id: "client-intake",
     name: "Client Intake AI Agent",
-    tagline: "Qualifies Leads & Books Next Steps",
-    description: "No more manual onboarding. This agent gathers all essential information, prequalifies customers, stores data, and even schedules meetings or sends forms.",
+    tagline: "Smooth, structured onboarding for every client.",
+    description: "Collects the right details, pre-qualifies prospects, gathers documents and books next steps without manual chasing.",
     icon: UserPlus,
     image: "/agents/client-intake.jpg",
-    animatedImage: "/agents/animations/client-intake.png", // Animated illustration like handshake
+    animatedImage: "/agents/animations/client-intake.png",
     features: [
-      "Form data collection",
-      "Lead qualification",
-      "Document gathering",
-      "Appointment scheduling",
-      "CRM updates",
-      "Data storing"
-    ]
+      "Smart intake questions and forms",
+      "Lead qualification built in",
+      "Document and information gathering",
+      "Automatic scheduling and CRM updates"
+    ],
+    useCases: ["Great for: lawyers, tradies, clinics, consultants and agencies."]
   },
   {
     id: "invoice-tax",
     name: "Invoice, GST & Tax AI Agent",
-    tagline: "Stress Free Business Accounting",
-    description: "Built for Australian businesses, it ensures accuracy, avoids human errors, and prepares your financial data in clean, accountant ready formats.",
+    tagline: "Fast, accurate bookkeeping support for busy businesses.",
+    description: "Generates invoices, calculates GST, tracks expenses and prepares clean summaries so your accountant gets data that's ready to go.",
     icon: Receipt,
     image: "/agents/invoice-tax.jpg",
     animatedImage: "/agents/animations/invoice-tax.png",
     features: [
-      "Invoice generation",
-      "GST calculation",
-      "Tax breakdowns",
-      "Expense tracking",
-      "Payment reminders",
-      "Compliance ready reports"
-    ]
+      "Automated invoice generation and reminders",
+      "GST and tax breakdowns",
+      "Expense tracking and categorisation",
+      "Compliance-friendly reporting"
+    ],
+    useCases: ["Great for: SMEs, tradies, solo operators and growing agencies."]
   },
   {
-    id: "video-analyzer",
-    name: "Video Analyzer",
-    tagline: "Intelligent Video Content Analysis",
-    description: "This agent analyzes video content and provides detailed descriptions of what is happening in the footage. Perfect for content creators, educators, and businesses that need automated video summarization and analysis.",
-    icon: Video,
-    image: "/agents/video-analyzer.svg",
-    animatedImage: "/agents/video-analyzer.svg",
+    id: "seo",
+    name: "SEO AI Agent",
+    tagline: "Search visibility, handled intelligently.",
+    description: "Reviews your site, your competitors and your keywords to build a focused SEO plan and create content that helps you rank.",
+    icon: Search,
+    image: "/agents/seo.jpg",
+    animatedImage: "/agents/animations/seo.png",
     features: [
-      "Automatic video analysis",
-      "Detailed scene descriptions",
-      "Content summarization",
-      "Object and action recognition",
-      "Timestamp annotations",
-      "Multi format support"
-    ]
+      "Keyword and competitor analysis",
+      "On-page optimisation recommendations",
+      "Blog and content suggestions",
+      "Clear, actionable SEO strategy"
+    ],
+    useCases: ["Great for: owners wanting growth without big SEO retainers."]
+  },
+  {
+    id: "social-media",
+    name: "Social Media AI Agent",
+    tagline: "Daily content, consistently on-brand.",
+    description: "Plans and drafts posts, captions and hashtags, tracks trends and keeps your social channels active without needing a full-time social media hire.",
+    icon: Share2,
+    image: "/agents/social-media.jpg",
+    animatedImage: "/agents/animations/social-media.png",
+    features: [
+      "Daily posts and captions in your brand voice",
+      "Hashtag and trend suggestions",
+      "Simple content calendars",
+      "Multi-platform support"
+    ],
+    useCases: ["Great for: brands wanting consistent content without the stress."]
+  },
+  {
+    id: "cyber-security",
+    name: "Cyber Security AI Agent",
+    tagline: "Proactive protection for modern threats.",
+    description: "Monitors systems for unusual activity, flags vulnerabilities and shares clear recommendations so you can act before problems escalate.",
+    icon: Shield,
+    image: "/agents/cyber-security.jpg",
+    animatedImage: "/agents/animations/cyber-security.png",
+    features: [
+      "Threat and anomaly monitoring",
+      "Vulnerability and risk checks",
+      "Actionable security recommendations",
+      "Support for compliance and alerts"
+    ],
+    useCases: ["Great for: organisations wanting strong security without enterprise costs."]
   }
 ];
 

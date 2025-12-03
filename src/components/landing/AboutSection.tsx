@@ -1,6 +1,6 @@
 'use client';
 
-import { Cpu, Heart, Lightbulb, Users } from "lucide-react";
+import { Cpu, Heart, Lightbulb, Users, Award } from "lucide-react";
 import Image from "next/image";
 
 const highlights = [
@@ -72,30 +72,22 @@ export function AboutSection() {
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Right Column - Text Content */}
-          <div className="space-y-8">
-            <div>
-              <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-                About Me
-              </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-                Creating <span className="text-gradient">Clarity, Alignment</span> & Flow
-              </h2>
-            </div>
-            
-            {/* Introduction */}
-            <div className="space-y-4">
-              <p className="text-lg text-foreground leading-relaxed">
-                Hi, I'm <span className="font-semibold text-primary">Damien</span>.
-              </p>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                I've worked across industries, systems, and technologies in digital health, care services, training, assessment, and large-scale transformation. This experience has shown me what creates effective outcomes.
-              </p>
+            {/* Official Partner Badge */}
+            <div className="card-elevated p-5 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Award className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-1">Official Partner</p>
+                  <p className="text-base font-bold text-foreground">MultipleAI Solutions</p>
+                  <p className="text-xs text-muted-foreground mt-1">Enterprise AI Solutions & Implementation</p>
+                </div>
+              </div>
             </div>
 
-            {/* Mission Section */}
+            {/* Mission */}
             <div className="card-elevated p-8 space-y-4">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full" />
@@ -103,19 +95,67 @@ export function AboutSection() {
                   My Mission
                 </h3>
               </div>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                I transform existing knowledge into practical, people-first AI that creates clarity, alignment, and flow for organisations.
+              <p className="text-base text-muted-foreground leading-relaxed text-justify">
+                Make AI adoption easier, safer, faster, and more human so your organisation can operate with more clarity, alignment, and flow.
               </p>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                My solutions support people by reducing friction, simplifying complexity, and making every interaction more intuitive for staff, customers, and communities.
+            </div>
+          </div>
+
+          {/* Right Column - Text Content */}
+          <div className="space-y-8 lg:pt-32">
+            <div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+                About <span className="text-gradient">Damien Hill</span>
+              </h2>
+            </div>
+            
+            {/* Introduction */}
+            <div className="space-y-4">
+              <p className="text-lg text-foreground leading-relaxed font-semibold text-justify">
+                With a career spanning digital health, care services, quality systems, business analysis, and organisational transformation, I bring a rare blend of frontline experience and strategic insight to every AI project.
+              </p>
+              <p className="text-base text-muted-foreground leading-relaxed text-justify">
+                I've spent years inside complex organisations, using a variety of roles to understand how people actually work and interact with digital systems, how processes really flow, where information bottlenecks, and why traditional technology often fails to deliver on its promises.
+              </p>
+              <p className="text-base text-muted-foreground leading-relaxed text-justify">
+                Solutions that utilise existing workflows, reduce friction, improve accuracy, and make knowledge easier to access all without overwhelming teams or disrupting operations.
               </p>
             </div>
 
-            {/* Focus Areas */}
-            <div className="card-minimal p-6 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
-              <p className="text-base text-foreground leading-relaxed">
-                My bespoke AI solutions focus on <span className="font-semibold text-primary">two core areas</span> that help organisations move from complexity and overwhelm to clarity, alignment, and flow.
+            {/* Quote */}
+            <div className="card-elevated p-8 space-y-4 border-primary/20">
+              <div className="flex items-start gap-4">
+                <Image 
+                  src="/Damien Avatar.png" 
+                  alt="Damien Hill" 
+                  width={60}
+                  height={60}
+                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                />
+                <p className="text-lg italic text-foreground leading-relaxed text-justify flex-1">
+                  "The future of work isn't more software. It's intelligent agents that work alongside your people. Let's build the first one together."
+                </p>
+              </div>
+            </div>
+
+            {/* MultipleAI Partnership */}
+            <div className="card-minimal p-6 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20 space-y-4">
+              <p className="text-base text-foreground leading-relaxed font-semibold text-justify">
+                I'm also backed by MultipleAI, a world-class technical team specialising in advanced AI agents and enterprise-grade solutions.
               </p>
+              <p className="text-base text-muted-foreground leading-relaxed text-justify">
+                Together, we combine my on the ground organisational expertise with their deep technical capability, giving you both safety and speed in your AI implementation.
+              </p>
+              <div className="space-y-2 pt-2">
+                <p className="text-base text-foreground leading-relaxed font-semibold text-justify">
+                  What you get is the best of both worlds:
+                </p>
+                <ul className="space-y-1 text-base text-muted-foreground leading-relaxed">
+                  <li className="text-justify">• A consultant who understands business, systems, and people and the realities of developing software solutions.</li>
+                  <li className="text-justify">• A technical team capable of building fast, stable, scalable AI agents.</li>
+                  <li className="text-justify">• A delivery process that produces results in days and weeks not months and years.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

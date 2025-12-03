@@ -327,3 +327,5 @@ When communicating about Energy of Now:
 
 *This knowledge base should be used to help users understand Energy of Now's services, products, and approach. Always emphasize the people-first, practical approach and the ability to transform complexity into clarity.*
 
+
+

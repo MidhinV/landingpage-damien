@@ -85,10 +85,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="py-8 border-t-2 border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Energy of Now. All rights reserved.
+            © {currentYear} Energy of Now Pty Ltd • AI Solutions for Modern Organisations • Based in Perth, Western Australia
           </p>
           <p className="text-xs text-muted-foreground">
-            Bespoke AI Applications • Australia
+            Powered in partnership with MultipleAI
           </p>
         </div>
       </div>

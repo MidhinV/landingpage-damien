@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { Mail, MessageCircle, CheckCircle2 } from "lucide-react";
+import { Mail, MessageCircle, CheckCircle2, ArrowRight } from "lucide-react";
 import { useContactForm } from "@/contexts/ContactFormContext";
 
 export function CTASection() {
@@ -29,13 +29,16 @@ export function CTASection() {
                 <span className="text-gradient">Your Organisation</span>?
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Let's explore where AI agents can save time, reduce friction, and create capacity.
+                Let's explore where AI agents can save time, reduce friction, and create new capabilities and capacity.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button variant="hero" size="xl" onClick={openForm}>
+                Start a Conversation
+                <ArrowRight className="w-5 h-5" />
+              </Button>
               <Button variant="outline" size="xl" onClick={openForm}>
-                <Mail className="w-5 h-5" />
                 Schedule a Call
               </Button>
             </div>
