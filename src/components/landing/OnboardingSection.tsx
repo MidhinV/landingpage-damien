@@ -90,39 +90,78 @@ export function OnboardingSection() {
           </div>
 
           {/* Agents Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {agents.map((agent) => {
-              return (
-                <button
-                  key={agent.id}
-                  onClick={() => setSelectedAgent(agent)}
-                  className="card-elevated p-6 text-left hover-lift group transition-all duration-300 hover:border-primary/50"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <AnimatedAgentIcon 
-                      Icon={agent.icon} 
-                      agentId={agent.id}
-                      className="flex-shrink-0"
-                    />
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
-                        {agent.name}
-                      </h3>
-                      <p className="text-sm text-primary font-medium mb-2">
-                        {agent.tagline}
-                      </p>
+          <div className="space-y-6 mb-12">
+            {/* First 9 agents in 3-column grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {agents.slice(0, 9).map((agent) => {
+                return (
+                  <button
+                    key={agent.id}
+                    onClick={() => setSelectedAgent(agent)}
+                    className="card-elevated p-6 text-left hover-lift group transition-all duration-300 hover:border-primary/50"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <AnimatedAgentIcon 
+                        Icon={agent.icon} 
+                        agentId={agent.id}
+                        className="flex-shrink-0"
+                      />
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
+                          {agent.name}
+                        </h3>
+                        <p className="text-sm text-primary font-medium mb-2">
+                          {agent.tagline}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 text-justify">
-                    {agent.description}
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm text-primary font-medium">
-                    Learn more
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </button>
-              );
-            })}
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 text-justify">
+                      {agent.description}
+                    </p>
+                    <div className="mt-4 flex items-center gap-2 text-sm text-primary font-medium">
+                      Learn more
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Last 2 agents centered */}
+            <div className="flex justify-center gap-6 flex-wrap">
+              {agents.slice(9).map((agent) => {
+                return (
+                  <button
+                    key={agent.id}
+                    onClick={() => setSelectedAgent(agent)}
+                    className="card-elevated p-6 text-left hover-lift group transition-all duration-300 hover:border-primary/50 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-md"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <AnimatedAgentIcon 
+                        Icon={agent.icon} 
+                        agentId={agent.id}
+                        className="flex-shrink-0"
+                      />
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
+                          {agent.name}
+                        </h3>
+                        <p className="text-sm text-primary font-medium mb-2">
+                          {agent.tagline}
+                        </p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 text-justify">
+                      {agent.description}
+                    </p>
+                    <div className="mt-4 flex items-center gap-2 text-sm text-primary font-medium">
+                      Learn more
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
         </div>
