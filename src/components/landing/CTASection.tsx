@@ -26,7 +26,7 @@ export function CTASection() {
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Ready to Explore What AI Agents Could Do in{" "}
-                <span className="text-gradient">Your Organisation</span>?
+                <span className="text-gradient">Your Organisation?</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Let's explore where AI agents can save time, reduce friction, and create new capabilities and capacity.

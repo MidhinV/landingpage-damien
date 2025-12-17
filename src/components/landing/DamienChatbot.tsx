@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { X, Send, Mic, MicOff, Minimize2, Maximize2 } from 'lucide-react';
+import { X, Send, Mic, MicOff, Minimize2, Maximize2, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -160,17 +160,10 @@ export function DamienChatbot() {
             <TooltipTrigger asChild>
               <button
                 onClick={() => setIsOpen(true)}
-                className="relative w-16 h-16 rounded-full bg-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center overflow-hidden border-2 border-primary/20"
+                className="relative w-16 h-16 rounded-full bg-primary shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center border-2 border-primary/20"
                 aria-label="Chat with Damien"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80" />
-                <Image
-                  src="/damien-photo.png"
-                  alt="Damien"
-                  width={64}
-                  height={64}
-                  className="w-full h-full object-cover rounded-full"
-                />
+                <MessageCircle className="w-8 h-8 text-primary-foreground" />
                 <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-background animate-pulse" />
               </button>
             </TooltipTrigger>

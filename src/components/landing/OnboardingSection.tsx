@@ -230,10 +230,12 @@ export function OnboardingSection() {
       </Dialog>
       
       {/* Closing Note */}
-      <div className="max-w-4xl mx-auto text-center mt-12">
-        <p className="text-lg text-muted-foreground leading-relaxed">
-          Want to see these in action for your organisation?<br />
-          <strong className="text-foreground">I can walk you through live demos and help you choose the right mix of agents for your needs.</strong>
+      <div className="max-w-4xl mx-auto text-center mt-16">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight">
+          Want to see these in action for your organisation?
+        </h3>
+        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+          I can walk you through live demos and help you choose the right mix of agents for your needs.
         </p>
       </div>
     </section>
